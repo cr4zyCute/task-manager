@@ -60,7 +60,7 @@ ini_set('display_errors', 0);
                     </button>
                     <div class="dropdown-content">
                         <a href="#"><i class="fas fa-user"></i> Profile</a>
-                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+
                         <a href="adminlogout.php"><i class="fas fa-sign-out-alt"></i> Log out</a>
                     </div>
                 </div>
@@ -151,10 +151,7 @@ ini_set('display_errors', 0);
                         </div>
                     </div>
 
-                    <div class="calendar-section">
-                        <h3>Employee Work Calendar</h3>
-                        <div id="calendar"></div>
-                    </div>
+
 
                 </section>
             </div>
