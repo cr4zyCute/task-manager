@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2025 at 08:06 AM
+-- Generation Time: May 29, 2025 at 08:08 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -69,13 +69,6 @@ CREATE TABLE `employees` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `employees`
---
-
-INSERT INTO `employees` (`id`, `first_name`, `last_name`, `gender`, `age`, `birthday`, `address`, `email`, `password`, `profile_image`, `role`, `created_at`) VALUES
-(1, 'Nikki Sixx', 'Acosta', 'Male', 22, '2025-05-29', 'Tuburan', 'crzycute4@gmail.com', '$2y$10$1dXtV9R4ZJRV5xQb3oowteUoxBhEzrYv.JGetrXxuG8.xXOFiGkLW', 'uploads/profile_1_1748498722.png', 'employee', '2025-05-29 06:02:05');
-
 -- --------------------------------------------------------
 
 --
@@ -93,15 +86,6 @@ CREATE TABLE `notifications` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `notifications`
---
-
-INSERT INTO `notifications` (`id`, `user_id`, `task_id`, `title`, `message`, `type`, `is_read`, `created_at`) VALUES
-(1, 1, 1, 'New Task Assigned', 'You have been assigned a new task: project no.1', 'task', 1, '2025-05-29 06:02:45'),
-(2, 1, NULL, 'Task Update: project no.1', 'Task Details:\nTitle: project no.1\nDescription: make a web base project\nStatus Updated: In Progress', 'task', 1, '2025-05-29 06:03:07'),
-(3, 1, NULL, 'Task Update: project no.1', 'Task Details:\nTitle: project no.1\nDescription: make a web base project\nStatus Updated: Completed', 'task', 1, '2025-05-29 06:03:42');
-
 -- --------------------------------------------------------
 
 --
@@ -117,13 +101,6 @@ CREATE TABLE `tasks` (
   `is_weekly` tinyint(1) DEFAULT 0,
   `status` enum('pending','in_progress','completed') DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tasks`
---
-
-INSERT INTO `tasks` (`id`, `title`, `description`, `assigned_to`, `due_date`, `is_weekly`, `status`) VALUES
-(1, 'project no.1', 'make a web base project', 1, '2025-05-31', 0, 'completed');
 
 --
 -- Indexes for dumped tables
