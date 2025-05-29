@@ -58,3 +58,10 @@ CREATE TABLE notifications (
     FOREIGN KEY (user_id) REFERENCES employees(id),
     FOREIGN KEY (task_id) REFERENCES tasks(id)
 );
+INSERT INTO admins (
+    first_name, last_name, gender, age, birthday, address,
+    email, password, profile_image
+) VALUES (
+    'System', 'Administrator', 'Other', 30, '1995-01-01', 'Admin Office',
+    'admin@gmail.com', 'admin', NULL
+);
